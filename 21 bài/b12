@@ -1,0 +1,23 @@
+void nhapMang(int A[], int n, int i = 0){
+    if(i == n) 
+        return;
+    printf("Nhap phan tu thu A[%d] = ", i);
+    scanf("%d", &A[i]);
+    nhapMang(A, n, i + 1);
+}
+void xuatMang(int A[], int n, int i = 0){
+    if(i == n)
+        return;
+    printf("%5d", A[i]);
+    xuatMang(A, n, i + 1);
+}
+int main(){
+
+    int n;
+    int A[100];
+    printf("Nhap so luong phan tu cua mang = ");
+    scanf("%d", &n);
+    nhapMang(A, n);
+    printf("Mang da nhap la:\n");
+    xuatMang(A, n);
+    printf("\n");
